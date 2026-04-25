@@ -1,0 +1,24 @@
+name: mvo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyter
+  - ipykernel
+  - pip
+
+  # Convex optimization — cleaner syntax for MVO than scipy.optimize
+  - cvxpy
+
+  # Market data
+  - yfinance       # free historical price data from Yahoo Finance
+
+  # Dev ergonomics
+  - black          # auto-format Python code to one consistent style
