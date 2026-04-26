@@ -13,12 +13,17 @@ dependencies:
   - jupyter
   - ipykernel
   - pip
+  - ruff
+  - pytest
 
   # Convex optimization — cleaner syntax for MVO than scipy.optimize
   - cvxpy
 
   # Market data
-  - yfinance       # free historical price data from Yahoo Finance
+  - yfinance       # free historical price data from Yahoo Finance -- as a backup to Tiingo --
 
   # Dev ergonomics
   - black          # auto-format Python code to one consistent style
+
+  - python-dotenv  # load API keys from .env file
+  - requests       # HTTP client (already a transitive dep, but make it explicit)
