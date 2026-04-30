@@ -15,6 +15,7 @@ dependencies:
   - pip
   - ruff
   - pytest
+  - pyarrow
 
   # Convex optimization — cleaner syntax for MVO than scipy.optimize
   - cvxpy
