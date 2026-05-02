@@ -17,7 +17,7 @@ def test_geometric_mean_of_constant_returns():
     """For a constant return r, geometric mean equals r exactly."""
     returns = pd.DataFrame({"X": [0.10] * 12})
     result = geometric_mean(returns)
-    np.testing.assert_almost_equal(result["X"], 0.10, decimal=10)
+    assert result["X"] == pytest.approx(0.10)
 
 
 def test_geometric_mean_le_arithmetic_mean():
