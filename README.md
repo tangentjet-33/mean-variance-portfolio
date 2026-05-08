@@ -37,7 +37,6 @@ min   xᵀ Σ x
 s.t.  μᵀ x ≥ R         (return target)
 Σ xᵢ = 1          (full investment)
 ℓ ≤ xᵢ ≤ u        (weight bounds)
-
 The objective is portfolio variance: `Var(xᵀ r) = xᵀ Σ x`. Σ is positive semidefinite, so the problem is convex and has a unique global optimum.
 
 ### Estimators
@@ -117,7 +116,6 @@ pytest tests/ -v
 The plots in `outputs/` are checked in. To regenerate them, see the function-level entry points in `src/plots.py`.
 
 ## Project structure
-
 mean-variance-portfolio/
 ├── src/
 │   ├── config.py        # Project-wide constants (tickers, dates, paths)
