@@ -33,10 +33,13 @@ This matches [DeMiguel, Garlappi, and Uppal (2009)](https://academic.oup.com/rfs
 
 A convex quadratic program:
 
+~~~
 min   xᵀ Σ x
 s.t.  μᵀ x ≥ R         (return target)
-Σ xᵢ = 1          (full investment)
-ℓ ≤ xᵢ ≤ u        (weight bounds)
+      Σ xᵢ = 1          (full investment)
+      ℓ ≤ xᵢ ≤ u        (weight bounds)
+~~~
+
 The objective is portfolio variance: `Var(xᵀ r) = xᵀ Σ x`. Σ is positive semidefinite, so the problem is convex and has a unique global optimum.
 
 ### Estimators
@@ -94,7 +97,7 @@ Cumulative wealth from $1 invested at the start of the test window (Jan 2021). E
 
 ## Reproduction
 
-```bash
+~~~bash
 git clone https://github.com/tangentjet-33/mean-variance-portfolio
 cd mean-variance-portfolio
 
@@ -111,11 +114,13 @@ cp .env.example .env
 
 # 4. Run the test suite (31 tests, ~3 seconds)
 pytest tests/ -v
-```
+~~~
 
 The plots in `outputs/` are checked in. To regenerate them, see the function-level entry points in `src/plots.py`.
 
 ## Project structure
+
+~~~
 mean-variance-portfolio/
 ├── src/
 │   ├── config.py        # Project-wide constants (tickers, dates, paths)
@@ -130,6 +135,7 @@ mean-variance-portfolio/
 ├── outputs/             # Generated plots (PNG, 300 DPI)
 ├── environment.yml      # Conda environment specification
 └── pyproject.toml       # Package config + black/ruff config
+~~~
 
 ## Limitations and future work
 
