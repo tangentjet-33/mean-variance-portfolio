@@ -10,3 +10,8 @@ PROJECT_ROOT: Path = Path(__file__).parent.parent.resolve()
 DATA_DIR: Path = PROJECT_ROOT / "data"
 CACHE_DIR: Path = DATA_DIR / "raw"
 PRICES_CACHE_PATH: Path = CACHE_DIR / "prices_daily.parquet"
+
+OUTPUTS_DIR: Path = PROJECT_ROOT / "outputs"
+FRONTIER_PLOT_PATH: Path = OUTPUTS_DIR / "efficient_frontier.png"
+TANGENCY_PLOT_PATH: Path = OUTPUTS_DIR / "tangency_cml.png"
+BACKTEST_PLOT_PATH: Path = OUTPUTS_DIR / "backtest_cumulative.png"

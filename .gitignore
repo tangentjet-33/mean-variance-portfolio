@@ -26,3 +26,7 @@ outputs/**/*.pdf
 Thumbs.db
 .vscode/
 .idea/
+
+# Notebooks — local exploration only, not part of the deliverable
+notebooks/*.ipynb
+!notebooks/.gitkeep
